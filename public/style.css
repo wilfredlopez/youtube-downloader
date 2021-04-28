@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.disabled {
+  opacity: 0.6 !important;
+}
+:root {
+  --primaryColor: #0485ff;
+  --primaryColorShade: #016acc;
+  --primaryColorHue: #2b98ff;
+  --primaryColorContrast: #ffffff;
+  --spacing-1: 1rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(35deg, #ff001a, #da4545 35%, #a94444);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.heading {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.85rem;
+}
+
+.URL-input,
+.convert-button {
+  padding: 8px 10px;
+}
+
+.opt,
+.URL-input,
+.convert-button {
+  font-size: 2.2rem;
+}
+
+.URL-input {
+  margin: auto;
+  border-radius: 4px 0px 0px 4px;
+  width: 60rem;
+  text-align: left;
+  border: 2px solid #eeeeee;
+  background: #eeeeee;
+  outline: none;
+}
+
+.URL-input:focus {
+  border: 2px solid var(--primaryColorHue);
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  max-width: 900px;
+}
+.full-width {
+  width: 100%;
+}
+
+.sect {
+  margin-top: var(--spacing-1);
+}
+.form-control {
+  display: flex;
+}
+
+.convert-button {
+  margin: var(--spacing-1) auto;
+  border: 2px solid var(--primaryColor);
+  border-radius: 4px;
+  background: var(--primaryColor);
+  color: var(--primaryColorContrast);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 15px 18px;
+  transition: 0.15s;
+  box-shadow: 1px 1px 2px 0px rgb(0 0 0 / 20%), 1px 2px 1px 0px rgb(0 0 0 / 10%);
+  min-width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.convert-button:hover {
+  background: var(--primaryColorShade);
+  border-color: var(--primaryColorShade);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .URL-input {
+    margin: auto;
+    width: 100%;
+  }
+
+  .convert-button {
+    margin: 7% auto;
+    width: 100%;
+  }
+}
+
+.opt {
+  width: 100%;
+  margin: var(--spacing-1) auto;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.spacer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 1rem;
+}
