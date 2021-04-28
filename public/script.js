@@ -14,7 +14,8 @@ const select = document.querySelector('.opt')
 const serverURL = 'http://localhost:4000'
 
 SubmitButton.addEventListener('click', () => {
-  if (!URLinput.value) {
+  const value = URLinput.value
+  if (!value || !value.trim()) {
     alert('Enter YouTube URL')
   } else {
     if (select.value === 'mp3') {
@@ -43,5 +44,12 @@ async function downloadByType(query, type = 'downloadmp4' || 'downloadmp3') {
     SubmitButton.disabled = false
   } catch (error) {
     console.error(error)
+    SubmitButton.classList.remove('disabled')
+    SubmitButton.disabled = false
+    let message = ''
+    if (error instanceof Error) {
+      message = error.message
+    }
+    alert('there was an error ' + message)
   }
 }

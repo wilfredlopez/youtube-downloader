@@ -2,36 +2,37 @@
 <html lang='en'>
 
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel='stylesheet' href='./style.css' />
 	<title>Youtube Downloader</title>
 </head>
 
 <body>
 	<div class="container">
-
-		<h1 class='heading'>YouTube URL</h1>
+		<h1 class='heading'>YouTube Downloader</h1>
 		<section class="sect">
 
 			<div class="form-control">
-
-				<input class='URL-input' placeholder='https://www.youtube.com/watch?v=MtN1YnoL46Q' />
+				<label for="url-input">YouTube URL:</label>
+				<input class='URL-input' id="url-input" placeholder='https://www.youtube.com/watch?v=MtN1YnoL46Q' />
 			</div>
 			<div class="form-control">
+				<div class='opt-container'>
+
+					<label for="type-input">Type:</label>
+					<select class='opt' id="type-input">
+						<option value='mp3'>mp3</option>
+						<option value='mp4'>mp4</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-control flex-center">
 
 
-				<select class='opt'>
-					<option value='mp4'>mp4</option>
-					<option value='mp3'>mp3</option>
-				</select>
+				<button class='submit-button submit-button-render' animated id='btn'>Convert</button>
 			</div>
 		</section>
-		<section class="sect">
-			<div class="form-control">
-
-
-				<button class='convert-button' id='btn'>Convert</button>
-			</div>
-		</section>
 		<div class="spacer"></div>
 		<div class="spacer"></div>
 		<div class="spacer"></div>
@@ -39,9 +40,18 @@
 		<div class="spacer"></div>
 		<div class="spacer"></div>
 
-		<script src='./script.js'></script>
+
+
+
+	</div>
+	<div class="content-space"></div>
+	<footer class="text-center">
+		<p>By Wilfred Lopez</p>
+		<p>YouTube Downloader &copy; 2021</p>
+	</footer>
+	<div class="content-space"></div>
+	<script src='./script.js'></script>
 </body>
 
-</div>
 
 </html>
