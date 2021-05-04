@@ -3,11 +3,11 @@
 #### INSTALL
 
 ```
-npm i yt-dl -G
+npm i youtubedownload -G
 ```
 
 #### USE
 
 ```
-yt-dl
+youtubedownload
 ```
