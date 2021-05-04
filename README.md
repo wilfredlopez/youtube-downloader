@@ -3,7 +3,7 @@
 #### INSTALL
 
 ```
-npm i youtubedownload -G
+npm i -g youtubedownload
 ```
 
 #### USE
