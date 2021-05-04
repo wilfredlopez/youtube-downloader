@@ -6,7 +6,7 @@ import { mp3Download } from './mp3-download'
 import { getAbsolutePathTo } from './utils'
 import { videoDownload } from './video-download'
 import { videoIdsQuestion } from './videoIdsQuestion'
-
+import colors from 'colors'
 
 async function main() {
     try {
@@ -41,7 +41,7 @@ async function main() {
 async function execDownloads(type: DownloadTypes, videoIds: string[], downloadPath: string) {
     let startDownload = type === DOWNLOAD_TYPES.Audio ? mp3Download : videoDownload
     console.clear()
-    console.log(`Starting ${type} download process\n`)
+    console.log(colors.green(`Starting ${type} download process\n`))
     let n = 0
     for (const id of videoIds) {
         n++
