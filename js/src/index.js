@@ -7,7 +7,7 @@ const AudioController = require('./controllers/AudioDownload')
 const VideoController = require('./controllers/VideoController')
 
 const app = express()
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 9520
 
 app.use(cors())
 

@@ -11,7 +11,7 @@ const URLinput = document.querySelector('.URL-input')
  * @type{HTMLSelectElement}
  */
 const select = document.querySelector('.opt')
-const serverURL = 'http://localhost:4000'
+const serverURL = 'http://localhost:9520'
 
 SubmitButton.addEventListener('click', () => {
   const value = URLinput.value

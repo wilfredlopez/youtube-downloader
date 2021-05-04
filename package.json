@@ -2,30 +2,48 @@
   "name": "youtube-downloader",
   "version": "1.0.0",
   "description": "YouTube Video and Audio Downloader",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "Download",
+    "YouTube"
+  ],
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
-    "mp3": "node src/mp3Download.js",
-    "video": "node src/videoDownload.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepack": "yarn build",
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc"
   },
   "author": {
     "email": "cubamc@gmail.com",
     "name": "Wilfred Lopez",
     "url": "https://wilfredlopez.net"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "colors": "^1.4.0",
-    "cors-ts": "^1.0.3",
-    "express": "^4.17.1",
     "ffmpeg": "^0.0.4",
     "fluent-ffmpeg": "^2.1.2",
+    "inquirer": "^8.0.0",
     "ytdl-core": "^4.5.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+    "@types/ffmpeg-installer__ffmpeg": "^1.0.0",
+    "@types/fluent-ffmpeg": "^2.1.17",
+    "@types/inquirer": "^7.3.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilfredlopez/youtube-downloader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wilfredlopez/youtube-downloader/issues"
+  },
+  "homepage": "https://github.com/wilfredlopez/youtube-downloader#readme"
 }
