@@ -1,6 +1,6 @@
 {
   "name": "youtubedownload",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "YouTube Video and Audio Downloader",
   "main": "dist/index.js",
   "bin": "dist/index.js",
