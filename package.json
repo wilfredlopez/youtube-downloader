@@ -1,5 +1,5 @@
 {
-  "name": "@wilfredlopez/youtube-downloader",
+  "name": "yt-dl",
   "version": "1.0.0",
   "description": "YouTube Video and Audio Downloader",
   "main": "dist/index.js",
